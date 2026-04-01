@@ -1,0 +1,169 @@
+Analiza automata pentru toate testele
+
+Datele de test sunt generate pe loc la fiecare rulare.
+Nu se salveaza un fisier separat cu toate valorile generate, pentru ca se ajunge pana la 100000000 de elemente.
+
+Algoritmi folositi:
+Bubble Sort
+Selection Sort
+Insertion Sort
+Quick Sort
+Merge Sort
+Heap Sort
+Counting Sort
+Radix Sort
+
+Complexitati teoretice:
+Bubble Sort: O(n^2), memorie O(1)
+Selection Sort: O(n^2), memorie O(1)
+Insertion Sort: O(n^2), dar merge bine pe liste aproape sortate, memorie O(1)
+Quick Sort: O(n log n) in medie
+Merge Sort: O(n log n), memorie O(n)
+Heap Sort: O(n log n), memorie O(1)
+Counting Sort: O(n + k), bun cand valorile nu sunt foarte mari
+Radix Sort: O(numar_cifre * n), bun pentru numere intregi nenegative
+
+Cei mai rapizi algoritmi pe fiecare caz:
+n=10, tip=aleator -> Insertion Sort cu media 0.000000 sec
+n=10, tip=sortat -> Insertion Sort cu media 0.000000 sec
+n=10, tip=invers_sortat -> Quick Sort cu media 0.000000 sec
+n=10, tip=aproape_sortat -> Insertion Sort cu media 0.000000 sec
+n=10, tip=plat -> Insertion Sort cu media 0.000000 sec
+n=20, tip=aleator -> Counting Sort cu media 0.000000 sec
+n=20, tip=sortat -> Insertion Sort cu media 0.000000 sec
+n=20, tip=invers_sortat -> Quick Sort cu media 0.000000 sec
+n=20, tip=aproape_sortat -> Insertion Sort cu media 0.000000 sec
+n=20, tip=plat -> Radix Sort cu media 0.000000 sec
+n=50, tip=aleator -> Counting Sort cu media 0.000000 sec
+n=50, tip=sortat -> Insertion Sort cu media 0.000000 sec
+n=50, tip=invers_sortat -> Counting Sort cu media 0.000000 sec
+n=50, tip=aproape_sortat -> Insertion Sort cu media 0.000000 sec
+n=50, tip=plat -> Radix Sort cu media 0.000000 sec
+n=100, tip=aleator -> Counting Sort cu media 0.000000 sec
+n=100, tip=sortat -> Insertion Sort cu media 0.000000 sec
+n=100, tip=invers_sortat -> Counting Sort cu media 0.000000 sec
+n=100, tip=aproape_sortat -> Counting Sort cu media 0.000000 sec
+n=100, tip=plat -> Counting Sort cu media 0.000000 sec
+n=1000, tip=aleator -> Counting Sort cu media 0.000001 sec
+n=1000, tip=sortat -> Insertion Sort cu media 0.000001 sec
+n=1000, tip=invers_sortat -> Counting Sort cu media 0.000001 sec
+n=1000, tip=aproape_sortat -> Counting Sort cu media 0.000001 sec
+n=1000, tip=plat -> Counting Sort cu media 0.000001 sec
+n=10000, tip=aleator -> Counting Sort cu media 0.000011 sec
+n=10000, tip=sortat -> Counting Sort cu media 0.000011 sec
+n=10000, tip=invers_sortat -> Counting Sort cu media 0.000010 sec
+n=10000, tip=aproape_sortat -> Counting Sort cu media 0.000010 sec
+n=10000, tip=plat -> Counting Sort cu media 0.000014 sec
+n=100000, tip=aleator -> Counting Sort cu media 0.000167 sec
+n=100000, tip=sortat -> Counting Sort cu media 0.000088 sec
+n=100000, tip=invers_sortat -> Counting Sort cu media 0.000091 sec
+n=100000, tip=aproape_sortat -> Counting Sort cu media 0.000096 sec
+n=100000, tip=plat -> Counting Sort cu media 0.000129 sec
+n=1000000, tip=aleator -> Counting Sort cu media 0.002385 sec
+n=1000000, tip=sortat -> Counting Sort cu media 0.000876 sec
+n=1000000, tip=invers_sortat -> Counting Sort cu media 0.000918 sec
+n=1000000, tip=aproape_sortat -> Counting Sort cu media 0.001067 sec
+n=1000000, tip=plat -> Counting Sort cu media 0.001250 sec
+n=10000000, tip=aleator -> Counting Sort cu media 0.078191 sec
+n=10000000, tip=sortat -> Counting Sort cu media 0.009668 sec
+n=10000000, tip=invers_sortat -> Counting Sort cu media 0.009358 sec
+n=10000000, tip=aproape_sortat -> Counting Sort cu media 0.029972 sec
+n=10000000, tip=plat -> Counting Sort cu media 0.012915 sec
+n=100000000, tip=aleator -> Radix Sort cu media 1.027750 sec
+n=100000000, tip=sortat -> Quick Sort cu media 0.700253 sec
+n=100000000, tip=invers_sortat -> Quick Sort cu media 0.702029 sec
+n=100000000, tip=aproape_sortat -> Radix Sort cu media 0.974932 sec
+n=100000000, tip=plat -> Counting Sort cu media 0.131387 sec
+
+Cazuri sarite:
+n=10000, tip=aleator, algoritm=Bubble Sort -> SKIP_TIMP
+n=10000, tip=aleator, algoritm=Selection Sort -> SKIP_TIMP
+n=10000, tip=aleator, algoritm=Insertion Sort -> SKIP_TIMP
+n=10000, tip=sortat, algoritm=Bubble Sort -> SKIP_TIMP
+n=10000, tip=sortat, algoritm=Selection Sort -> SKIP_TIMP
+n=10000, tip=sortat, algoritm=Insertion Sort -> SKIP_TIMP
+n=10000, tip=invers_sortat, algoritm=Bubble Sort -> SKIP_TIMP
+n=10000, tip=invers_sortat, algoritm=Selection Sort -> SKIP_TIMP
+n=10000, tip=invers_sortat, algoritm=Insertion Sort -> SKIP_TIMP
+n=10000, tip=aproape_sortat, algoritm=Bubble Sort -> SKIP_TIMP
+n=10000, tip=aproape_sortat, algoritm=Selection Sort -> SKIP_TIMP
+n=10000, tip=aproape_sortat, algoritm=Insertion Sort -> SKIP_TIMP
+n=10000, tip=plat, algoritm=Bubble Sort -> SKIP_TIMP
+n=10000, tip=plat, algoritm=Selection Sort -> SKIP_TIMP
+n=10000, tip=plat, algoritm=Insertion Sort -> SKIP_TIMP
+n=100000, tip=aleator, algoritm=Bubble Sort -> SKIP_TIMP
+n=100000, tip=aleator, algoritm=Selection Sort -> SKIP_TIMP
+n=100000, tip=aleator, algoritm=Insertion Sort -> SKIP_TIMP
+n=100000, tip=sortat, algoritm=Bubble Sort -> SKIP_TIMP
+n=100000, tip=sortat, algoritm=Selection Sort -> SKIP_TIMP
+n=100000, tip=sortat, algoritm=Insertion Sort -> SKIP_TIMP
+n=100000, tip=invers_sortat, algoritm=Bubble Sort -> SKIP_TIMP
+n=100000, tip=invers_sortat, algoritm=Selection Sort -> SKIP_TIMP
+n=100000, tip=invers_sortat, algoritm=Insertion Sort -> SKIP_TIMP
+n=100000, tip=aproape_sortat, algoritm=Bubble Sort -> SKIP_TIMP
+n=100000, tip=aproape_sortat, algoritm=Selection Sort -> SKIP_TIMP
+n=100000, tip=aproape_sortat, algoritm=Insertion Sort -> SKIP_TIMP
+n=100000, tip=plat, algoritm=Bubble Sort -> SKIP_TIMP
+n=100000, tip=plat, algoritm=Selection Sort -> SKIP_TIMP
+n=100000, tip=plat, algoritm=Insertion Sort -> SKIP_TIMP
+n=1000000, tip=aleator, algoritm=Bubble Sort -> SKIP_TIMP
+n=1000000, tip=aleator, algoritm=Selection Sort -> SKIP_TIMP
+n=1000000, tip=aleator, algoritm=Insertion Sort -> SKIP_TIMP
+n=1000000, tip=sortat, algoritm=Bubble Sort -> SKIP_TIMP
+n=1000000, tip=sortat, algoritm=Selection Sort -> SKIP_TIMP
+n=1000000, tip=sortat, algoritm=Insertion Sort -> SKIP_TIMP
+n=1000000, tip=invers_sortat, algoritm=Bubble Sort -> SKIP_TIMP
+n=1000000, tip=invers_sortat, algoritm=Selection Sort -> SKIP_TIMP
+n=1000000, tip=invers_sortat, algoritm=Insertion Sort -> SKIP_TIMP
+n=1000000, tip=aproape_sortat, algoritm=Bubble Sort -> SKIP_TIMP
+n=1000000, tip=aproape_sortat, algoritm=Selection Sort -> SKIP_TIMP
+n=1000000, tip=aproape_sortat, algoritm=Insertion Sort -> SKIP_TIMP
+n=1000000, tip=plat, algoritm=Bubble Sort -> SKIP_TIMP
+n=1000000, tip=plat, algoritm=Selection Sort -> SKIP_TIMP
+n=1000000, tip=plat, algoritm=Insertion Sort -> SKIP_TIMP
+n=10000000, tip=aleator, algoritm=Bubble Sort -> SKIP_TIMP
+n=10000000, tip=aleator, algoritm=Selection Sort -> SKIP_TIMP
+n=10000000, tip=aleator, algoritm=Insertion Sort -> SKIP_TIMP
+n=10000000, tip=sortat, algoritm=Bubble Sort -> SKIP_TIMP
+n=10000000, tip=sortat, algoritm=Selection Sort -> SKIP_TIMP
+n=10000000, tip=sortat, algoritm=Insertion Sort -> SKIP_TIMP
+n=10000000, tip=invers_sortat, algoritm=Bubble Sort -> SKIP_TIMP
+n=10000000, tip=invers_sortat, algoritm=Selection Sort -> SKIP_TIMP
+n=10000000, tip=invers_sortat, algoritm=Insertion Sort -> SKIP_TIMP
+n=10000000, tip=aproape_sortat, algoritm=Bubble Sort -> SKIP_TIMP
+n=10000000, tip=aproape_sortat, algoritm=Selection Sort -> SKIP_TIMP
+n=10000000, tip=aproape_sortat, algoritm=Insertion Sort -> SKIP_TIMP
+n=10000000, tip=plat, algoritm=Bubble Sort -> SKIP_TIMP
+n=10000000, tip=plat, algoritm=Selection Sort -> SKIP_TIMP
+n=10000000, tip=plat, algoritm=Insertion Sort -> SKIP_TIMP
+n=100000000, tip=aleator, algoritm=Bubble Sort -> SKIP_TIMP
+n=100000000, tip=aleator, algoritm=Selection Sort -> SKIP_TIMP
+n=100000000, tip=aleator, algoritm=Insertion Sort -> SKIP_TIMP
+n=100000000, tip=aleator, algoritm=Counting Sort -> SKIP_MEMORIE
+n=100000000, tip=sortat, algoritm=Bubble Sort -> SKIP_TIMP
+n=100000000, tip=sortat, algoritm=Selection Sort -> SKIP_TIMP
+n=100000000, tip=sortat, algoritm=Insertion Sort -> SKIP_TIMP
+n=100000000, tip=sortat, algoritm=Counting Sort -> SKIP_MEMORIE
+n=100000000, tip=invers_sortat, algoritm=Bubble Sort -> SKIP_TIMP
+n=100000000, tip=invers_sortat, algoritm=Selection Sort -> SKIP_TIMP
+n=100000000, tip=invers_sortat, algoritm=Insertion Sort -> SKIP_TIMP
+n=100000000, tip=invers_sortat, algoritm=Counting Sort -> SKIP_MEMORIE
+n=100000000, tip=aproape_sortat, algoritm=Bubble Sort -> SKIP_TIMP
+n=100000000, tip=aproape_sortat, algoritm=Selection Sort -> SKIP_TIMP
+n=100000000, tip=aproape_sortat, algoritm=Insertion Sort -> SKIP_TIMP
+n=100000000, tip=aproape_sortat, algoritm=Counting Sort -> SKIP_MEMORIE
+n=100000000, tip=plat, algoritm=Bubble Sort -> SKIP_TIMP
+n=100000000, tip=plat, algoritm=Selection Sort -> SKIP_TIMP
+n=100000000, tip=plat, algoritm=Insertion Sort -> SKIP_TIMP
+
+Observatii automate:
+La n=1000, Insertion Sort pe liste aproape sortate a avut 0.000010 sec, iar pe liste aleatoare 0.000064 sec.
+La n=100000 pe liste aleatoare, Quick Sort a avut 0.004149 sec.
+La n=100000 pe liste aleatoare, Merge Sort a avut 0.003248 sec.
+La n=100000 pe liste aleatoare, Heap Sort a avut 0.004878 sec.
+La n=100000000 pe liste aleatoare, Quick Sort a avut 6.037472 sec.
+La n=100000000 pe liste aleatoare, Merge Sort a avut 4.885543 sec.
+La n=100000000 pe liste aleatoare, Heap Sort a avut 36.255061 sec.
+Algoritmii O(n^2) sunt buni pe liste mici, dar devin nepractice pe liste mari.
+Daca apare SKIP_TIMP, inseamna ca acel algoritm ar dura prea mult pentru dimensiunea respectiva.
+Daca apare SKIP_MEMORIE, inseamna ca acel algoritm ar cere prea multa memorie pentru acel caz.
