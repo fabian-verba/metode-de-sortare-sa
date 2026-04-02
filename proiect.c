@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -395,6 +394,15 @@ double medie(Rezultat rezultat) {
     return rezultat.total / rezultat.rulari;
 }
 
+void formateazaTimp(double timp, char text[], size_t dimensiuneText) {
+    if (timp < 0.000001) {
+        snprintf(text, dimensiuneText, "< 0.000001 sec");
+        return;
+    }
+
+    snprintf(text, dimensiuneText, "%.6f sec", timp);
+}
+
 unsigned int calculeazaSeed(int dimensiune, int tip, int repetare) {
     unsigned long long baza = 123456789ULL;
     baza += (unsigned long long)dimensiune * 97ULL;
@@ -488,13 +496,14 @@ void scrieAnaliza(FILE *fisier,
     fprintf(fisier, "Merge Sort: O(n log n), memorie O(n)\n");
     fprintf(fisier, "Heap Sort: O(n log n), memorie O(1)\n");
     fprintf(fisier, "Counting Sort: O(n + k), bun cand valorile nu sunt foarte mari\n");
-    fprintf(fisier, "Radix Sort: O(numar_cifre * n), bun pentru numere intregi nenegative\n\n");
+    fprintf(fisier, "Radix Sort: O(numar_cifre * n), bun pentru numere intregi pozitive\n\n");
     fprintf(fisier, "Cei mai rapizi algoritmi pe fiecare caz:\n");
 
     for (int indexSet = 0; indexSet < numarSeturi; indexSet++) {
         for (int indexTip = 0; indexTip < TIPURI_DATE; indexTip++) {
             int indexBest = -1;
             double timpBest = 0.0;
+            char timpText[32];
 
             for (int indexAlgoritm = 0; indexAlgoritm < ALGORITMI; indexAlgoritm++) {
                 Rezultat rezultatCurent = rezultate[indexSet][indexTip][indexAlgoritm];
@@ -508,12 +517,13 @@ void scrieAnaliza(FILE *fisier,
             }
 
             if (indexBest != -1) {
+                formateazaTimp(timpBest, timpText, sizeof(timpText));
                 fprintf(fisier,
-                        "n=%d, tip=%s -> %s cu media %.6f sec\n",
+                        "n=%d, tip=%s -> %s cu media %s\n",
                         seturi[indexSet].dimensiune,
                         tipuriDate[indexTip].nume,
                         algoritmi[indexBest].nume,
-                        timpBest);
+                        timpText);
             }
         }
     }
@@ -542,10 +552,14 @@ void scrieAnaliza(FILE *fisier,
         double insertionAleator = medie(rezultate[index1000][0][2]);
         double insertionAproape = medie(rezultate[index1000][3][2]);
         if (insertionAleator > 0.0 && insertionAproape > 0.0) {
+            char insertionAleatorText[32];
+            char insertionAproapeText[32];
+            formateazaTimp(insertionAleator, insertionAleatorText, sizeof(insertionAleatorText));
+            formateazaTimp(insertionAproape, insertionAproapeText, sizeof(insertionAproapeText));
             fprintf(fisier,
-                    "La n=1000, Insertion Sort pe liste aproape sortate a avut %.6f sec, iar pe liste aleatoare %.6f sec.\n",
-                    insertionAproape,
-                    insertionAleator);
+                    "La n=1000, Insertion Sort pe liste aproape sortate a avut %s, iar pe liste aleatoare %s.\n",
+                    insertionAproapeText,
+                    insertionAleatorText);
         }
     }
 
@@ -555,13 +569,19 @@ void scrieAnaliza(FILE *fisier,
         double mergeAleator = medie(rezultate[index100000][0][4]);
         double heapAleator = medie(rezultate[index100000][0][5]);
         if (quickAleator > 0.0) {
-            fprintf(fisier, "La n=100000 pe liste aleatoare, Quick Sort a avut %.6f sec.\n", quickAleator);
+            char quickAleatorText[32];
+            formateazaTimp(quickAleator, quickAleatorText, sizeof(quickAleatorText));
+            fprintf(fisier, "La n=100000 pe liste aleatoare, Quick Sort a avut %s.\n", quickAleatorText);
         }
         if (mergeAleator > 0.0) {
-            fprintf(fisier, "La n=100000 pe liste aleatoare, Merge Sort a avut %.6f sec.\n", mergeAleator);
+            char mergeAleatorText[32];
+            formateazaTimp(mergeAleator, mergeAleatorText, sizeof(mergeAleatorText));
+            fprintf(fisier, "La n=100000 pe liste aleatoare, Merge Sort a avut %s.\n", mergeAleatorText);
         }
         if (heapAleator > 0.0) {
-            fprintf(fisier, "La n=100000 pe liste aleatoare, Heap Sort a avut %.6f sec.\n", heapAleator);
+            char heapAleatorText[32];
+            formateazaTimp(heapAleator, heapAleatorText, sizeof(heapAleatorText));
+            fprintf(fisier, "La n=100000 pe liste aleatoare, Heap Sort a avut %s.\n", heapAleatorText);
         }
     }
 
@@ -571,13 +591,19 @@ void scrieAnaliza(FILE *fisier,
         double mergeMare = medie(rezultate[index100000000][0][4]);
         double heapMare = medie(rezultate[index100000000][0][5]);
         if (quickMare > 0.0) {
-            fprintf(fisier, "La n=100000000 pe liste aleatoare, Quick Sort a avut %.6f sec.\n", quickMare);
+            char quickMareText[32];
+            formateazaTimp(quickMare, quickMareText, sizeof(quickMareText));
+            fprintf(fisier, "La n=100000000 pe liste aleatoare, Quick Sort a avut %s.\n", quickMareText);
         }
         if (mergeMare > 0.0) {
-            fprintf(fisier, "La n=100000000 pe liste aleatoare, Merge Sort a avut %.6f sec.\n", mergeMare);
+            char mergeMareText[32];
+            formateazaTimp(mergeMare, mergeMareText, sizeof(mergeMareText));
+            fprintf(fisier, "La n=100000000 pe liste aleatoare, Merge Sort a avut %s.\n", mergeMareText);
         }
         if (heapMare > 0.0) {
-            fprintf(fisier, "La n=100000000 pe liste aleatoare, Heap Sort a avut %.6f sec.\n", heapMare);
+            char heapMareText[32];
+            formateazaTimp(heapMare, heapMareText, sizeof(heapMareText));
+            fprintf(fisier, "La n=100000000 pe liste aleatoare, Heap Sort a avut %s.\n", heapMareText);
         }
     }
 
@@ -727,7 +753,9 @@ int main(void) {
                 if (rezultatCurent.skip != FARA_SKIP || rezultatCurent.esuat) {
                     printf("  %-15s %s\n", algoritmi[indexAlgoritm].nume, statusRezultat(rezultatCurent));
                 } else {
-                    printf("  %-15s medie=%.6f sec\n", algoritmi[indexAlgoritm].nume, medie(rezultatCurent));
+                    char timpText[32];
+                    formateazaTimp(medie(rezultatCurent), timpText, sizeof(timpText));
+                    printf("  %-15s medie=%s\n", algoritmi[indexAlgoritm].nume, timpText);
                 }
             }
 
