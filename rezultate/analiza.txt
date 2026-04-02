@@ -21,59 +21,59 @@ Quick Sort: O(n log n) in medie
 Merge Sort: O(n log n), memorie O(n)
 Heap Sort: O(n log n), memorie O(1)
 Counting Sort: O(n + k), bun cand valorile nu sunt foarte mari
-Radix Sort: O(numar_cifre * n), bun pentru numere intregi nenegative
+Radix Sort: O(numar_cifre * n), bun pentru numere intregi pozitive
 
 Cei mai rapizi algoritmi pe fiecare caz:
-n=10, tip=aleator -> Insertion Sort cu media 0.000000 sec
-n=10, tip=sortat -> Insertion Sort cu media 0.000000 sec
-n=10, tip=invers_sortat -> Quick Sort cu media 0.000000 sec
-n=10, tip=aproape_sortat -> Insertion Sort cu media 0.000000 sec
-n=10, tip=plat -> Insertion Sort cu media 0.000000 sec
-n=20, tip=aleator -> Counting Sort cu media 0.000000 sec
-n=20, tip=sortat -> Insertion Sort cu media 0.000000 sec
-n=20, tip=invers_sortat -> Quick Sort cu media 0.000000 sec
-n=20, tip=aproape_sortat -> Insertion Sort cu media 0.000000 sec
-n=20, tip=plat -> Radix Sort cu media 0.000000 sec
-n=50, tip=aleator -> Counting Sort cu media 0.000000 sec
-n=50, tip=sortat -> Insertion Sort cu media 0.000000 sec
-n=50, tip=invers_sortat -> Counting Sort cu media 0.000000 sec
-n=50, tip=aproape_sortat -> Insertion Sort cu media 0.000000 sec
-n=50, tip=plat -> Radix Sort cu media 0.000000 sec
-n=100, tip=aleator -> Counting Sort cu media 0.000000 sec
-n=100, tip=sortat -> Insertion Sort cu media 0.000000 sec
-n=100, tip=invers_sortat -> Counting Sort cu media 0.000000 sec
-n=100, tip=aproape_sortat -> Counting Sort cu media 0.000000 sec
-n=100, tip=plat -> Counting Sort cu media 0.000000 sec
-n=1000, tip=aleator -> Counting Sort cu media 0.000001 sec
-n=1000, tip=sortat -> Insertion Sort cu media 0.000001 sec
-n=1000, tip=invers_sortat -> Counting Sort cu media 0.000001 sec
-n=1000, tip=aproape_sortat -> Counting Sort cu media 0.000001 sec
-n=1000, tip=plat -> Counting Sort cu media 0.000001 sec
-n=10000, tip=aleator -> Counting Sort cu media 0.000011 sec
-n=10000, tip=sortat -> Counting Sort cu media 0.000011 sec
-n=10000, tip=invers_sortat -> Counting Sort cu media 0.000010 sec
-n=10000, tip=aproape_sortat -> Counting Sort cu media 0.000010 sec
-n=10000, tip=plat -> Counting Sort cu media 0.000014 sec
-n=100000, tip=aleator -> Counting Sort cu media 0.000167 sec
-n=100000, tip=sortat -> Counting Sort cu media 0.000088 sec
-n=100000, tip=invers_sortat -> Counting Sort cu media 0.000091 sec
-n=100000, tip=aproape_sortat -> Counting Sort cu media 0.000096 sec
-n=100000, tip=plat -> Counting Sort cu media 0.000129 sec
-n=1000000, tip=aleator -> Counting Sort cu media 0.002385 sec
-n=1000000, tip=sortat -> Counting Sort cu media 0.000876 sec
-n=1000000, tip=invers_sortat -> Counting Sort cu media 0.000918 sec
-n=1000000, tip=aproape_sortat -> Counting Sort cu media 0.001067 sec
-n=1000000, tip=plat -> Counting Sort cu media 0.001250 sec
-n=10000000, tip=aleator -> Counting Sort cu media 0.078191 sec
-n=10000000, tip=sortat -> Counting Sort cu media 0.009668 sec
-n=10000000, tip=invers_sortat -> Counting Sort cu media 0.009358 sec
-n=10000000, tip=aproape_sortat -> Counting Sort cu media 0.029972 sec
-n=10000000, tip=plat -> Counting Sort cu media 0.012915 sec
-n=100000000, tip=aleator -> Radix Sort cu media 1.027750 sec
-n=100000000, tip=sortat -> Quick Sort cu media 0.700253 sec
-n=100000000, tip=invers_sortat -> Quick Sort cu media 0.702029 sec
-n=100000000, tip=aproape_sortat -> Radix Sort cu media 0.974932 sec
-n=100000000, tip=plat -> Counting Sort cu media 0.131387 sec
+n=10, tip=aleator -> Counting Sort cu media < 0.000001 sec
+n=10, tip=sortat -> Insertion Sort cu media < 0.000001 sec
+n=10, tip=invers_sortat -> Quick Sort cu media < 0.000001 sec
+n=10, tip=aproape_sortat -> Insertion Sort cu media < 0.000001 sec
+n=10, tip=plat -> Counting Sort cu media < 0.000001 sec
+n=20, tip=aleator -> Counting Sort cu media < 0.000001 sec
+n=20, tip=sortat -> Insertion Sort cu media < 0.000001 sec
+n=20, tip=invers_sortat -> Counting Sort cu media < 0.000001 sec
+n=20, tip=aproape_sortat -> Insertion Sort cu media < 0.000001 sec
+n=20, tip=plat -> Counting Sort cu media < 0.000001 sec
+n=50, tip=aleator -> Counting Sort cu media < 0.000001 sec
+n=50, tip=sortat -> Insertion Sort cu media < 0.000001 sec
+n=50, tip=invers_sortat -> Counting Sort cu media < 0.000001 sec
+n=50, tip=aproape_sortat -> Insertion Sort cu media < 0.000001 sec
+n=50, tip=plat -> Counting Sort cu media < 0.000001 sec
+n=100, tip=aleator -> Counting Sort cu media < 0.000001 sec
+n=100, tip=sortat -> Insertion Sort cu media < 0.000001 sec
+n=100, tip=invers_sortat -> Counting Sort cu media < 0.000001 sec
+n=100, tip=aproape_sortat -> Counting Sort cu media < 0.000001 sec
+n=100, tip=plat -> Counting Sort cu media < 0.000001 sec
+n=1000, tip=aleator -> Counting Sort cu media 0.000003 sec
+n=1000, tip=sortat -> Insertion Sort cu media 0.000002 sec
+n=1000, tip=invers_sortat -> Counting Sort cu media 0.000003 sec
+n=1000, tip=aproape_sortat -> Counting Sort cu media 0.000003 sec
+n=1000, tip=plat -> Counting Sort cu media 0.000003 sec
+n=10000, tip=aleator -> Counting Sort cu media 0.000035 sec
+n=10000, tip=sortat -> Counting Sort cu media 0.000037 sec
+n=10000, tip=invers_sortat -> Counting Sort cu media 0.000036 sec
+n=10000, tip=aproape_sortat -> Counting Sort cu media 0.000036 sec
+n=10000, tip=plat -> Counting Sort cu media 0.000030 sec
+n=100000, tip=aleator -> Counting Sort cu media 0.000409 sec
+n=100000, tip=sortat -> Counting Sort cu media 0.000341 sec
+n=100000, tip=invers_sortat -> Counting Sort cu media 0.000329 sec
+n=100000, tip=aproape_sortat -> Counting Sort cu media 0.000344 sec
+n=100000, tip=plat -> Counting Sort cu media 0.000303 sec
+n=1000000, tip=aleator -> Counting Sort cu media 0.005997 sec
+n=1000000, tip=sortat -> Counting Sort cu media 0.003620 sec
+n=1000000, tip=invers_sortat -> Counting Sort cu media 0.003334 sec
+n=1000000, tip=aproape_sortat -> Counting Sort cu media 0.003933 sec
+n=1000000, tip=plat -> Counting Sort cu media 0.002936 sec
+n=10000000, tip=aleator -> Radix Sort cu media 0.196660 sec
+n=10000000, tip=sortat -> Counting Sort cu media 0.036196 sec
+n=10000000, tip=invers_sortat -> Counting Sort cu media 0.032633 sec
+n=10000000, tip=aproape_sortat -> Counting Sort cu media 0.090661 sec
+n=10000000, tip=plat -> Counting Sort cu media 0.028987 sec
+n=100000000, tip=aleator -> Radix Sort cu media 2.328420 sec
+n=100000000, tip=sortat -> Quick Sort cu media 1.379252 sec
+n=100000000, tip=invers_sortat -> Quick Sort cu media 1.459036 sec
+n=100000000, tip=aproape_sortat -> Quick Sort cu media 2.341818 sec
+n=100000000, tip=plat -> Counting Sort cu media 0.328681 sec
 
 Cazuri sarite:
 n=10000, tip=aleator, algoritm=Bubble Sort -> SKIP_TIMP
@@ -157,13 +157,13 @@ n=100000000, tip=plat, algoritm=Selection Sort -> SKIP_TIMP
 n=100000000, tip=plat, algoritm=Insertion Sort -> SKIP_TIMP
 
 Observatii automate:
-La n=1000, Insertion Sort pe liste aproape sortate a avut 0.000010 sec, iar pe liste aleatoare 0.000064 sec.
-La n=100000 pe liste aleatoare, Quick Sort a avut 0.004149 sec.
-La n=100000 pe liste aleatoare, Merge Sort a avut 0.003248 sec.
-La n=100000 pe liste aleatoare, Heap Sort a avut 0.004878 sec.
-La n=100000000 pe liste aleatoare, Quick Sort a avut 6.037472 sec.
-La n=100000000 pe liste aleatoare, Merge Sort a avut 4.885543 sec.
-La n=100000000 pe liste aleatoare, Heap Sort a avut 36.255061 sec.
+La n=1000, Insertion Sort pe liste aproape sortate a avut 0.000033 sec, iar pe liste aleatoare 0.000246 sec.
+La n=100000 pe liste aleatoare, Quick Sort a avut 0.006230 sec.
+La n=100000 pe liste aleatoare, Merge Sort a avut 0.008344 sec.
+La n=100000 pe liste aleatoare, Heap Sort a avut 0.011287 sec.
+La n=100000000 pe liste aleatoare, Quick Sort a avut 9.326951 sec.
+La n=100000000 pe liste aleatoare, Merge Sort a avut 13.188409 sec.
+La n=100000000 pe liste aleatoare, Heap Sort a avut 27.727918 sec.
 Algoritmii O(n^2) sunt buni pe liste mici, dar devin nepractice pe liste mari.
 Daca apare SKIP_TIMP, inseamna ca acel algoritm ar dura prea mult pentru dimensiunea respectiva.
 Daca apare SKIP_MEMORIE, inseamna ca acel algoritm ar cere prea multa memorie pentru acel caz.
